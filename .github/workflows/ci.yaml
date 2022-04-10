@@ -7,14 +7,16 @@ on:
 jobs:
   check-application:
     runs-on: ubuntu-latest
+    
     steps:
+    
       - uses: actions/checkout@v2
       - uses: actions/setup-go@v2
         with:
           go-version: 1.15
       - run: go test
       - run: go run math.go
-      
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
 
@@ -33,3 +35,4 @@ jobs:
         with:
           push: true
           tags: carlosranoya/full-cycle-ci-0:latest
+
