@@ -27,4 +27,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: false
-          tags: carlosranoya/full-cycle-CI-0:latest
+          tags: carlosranoya/full-cycle-ci-0:latest
